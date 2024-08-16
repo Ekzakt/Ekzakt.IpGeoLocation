@@ -2,7 +2,7 @@
 
 namespace Ekzakt.IpGeoLocationService.Core.Contracts;
 
-public interface IpGeoLocationService
+public interface IIpGeoLocationService
 {
     Task<IpGeoLocation> GetLocationAsync(string ipAddress);
 }
