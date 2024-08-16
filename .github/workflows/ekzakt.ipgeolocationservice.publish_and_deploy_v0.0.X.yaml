@@ -23,7 +23,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       
     - name: Update Build Number for Ekzakt.IpGeoLocationService.Core
-      run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" ./src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj
+      run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" ../src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj
       
     - name: Update Build Number for Ekzakt.IpGeoLocationService.IpInfo
       run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" ./src/Ekzakt.IpGeoLocationService.IpInfo/Ekzakt.IpGeoLocationService.IpInfo.csproj
