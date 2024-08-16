@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 		<Authors>Ekzakt</Authors>
 		<Company>Ekzakt</Company>
-		<Version>0.0.0</Version>
+		<Version>0.0.1</Version>
 		<Description>Package for accessing ip geolocation services. This project contains contracts and models.</Description>
 		<PackageProjectUrl>https://github.com/Ekzakt/Ekzakt.EmailSender</PackageProjectUrl>
 		<PackageTags>ip geolocation, ekzakt</PackageTags>
