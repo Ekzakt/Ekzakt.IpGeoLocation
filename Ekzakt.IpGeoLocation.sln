@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekzakt.IpGeoLocation.Core", "Ekzakt.IpGeoLocation.Core\Ekzakt.IpGeoLocation.Core.csproj", "{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C8344E8D-413A-4173-A86F-F58B0FD3DE21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6764DF26-970D-4893-9B00-5358784BB601}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F1CEF8E2-CFEC-4940-9077-E0D739A99451}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7} = {C8344E8D-413A-4173-A86F-F58B0FD3DE21}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C75F2190-6B4B-45BB-A08E-E5301A6B979C}
+	EndGlobalSection
+EndGlobal
