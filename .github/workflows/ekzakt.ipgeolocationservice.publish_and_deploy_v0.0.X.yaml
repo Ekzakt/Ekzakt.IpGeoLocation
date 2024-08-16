@@ -10,7 +10,7 @@ on:
 
 defaults:
   run:
-    shell: pwshù
+    shell: pwsh
     
 jobs:
   create_nuget:
