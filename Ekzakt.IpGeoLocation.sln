@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6764DF26
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F1CEF8E2-CFEC-4940-9077-E0D739A99451}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ekzakt.IpGeoLocation.IpInfo", "Ekzakt.IpGeoLocation.IpInfo\Ekzakt.IpGeoLocation.IpInfo.csproj", "{B269ED3E-43E2-4034-A38F-0F1BA23C6270}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,12 +23,17 @@ Global
 		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B269ED3E-43E2-4034-A38F-0F1BA23C6270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B269ED3E-43E2-4034-A38F-0F1BA23C6270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B269ED3E-43E2-4034-A38F-0F1BA23C6270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B269ED3E-43E2-4034-A38F-0F1BA23C6270}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{76B3664B-15C8-4C2B-AF59-AE1B6F6B59F7} = {C8344E8D-413A-4173-A86F-F58B0FD3DE21}
+		{B269ED3E-43E2-4034-A38F-0F1BA23C6270} = {C8344E8D-413A-4173-A86F-F58B0FD3DE21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C75F2190-6B4B-45BB-A08E-E5301A6B979C}
