@@ -11,6 +11,9 @@ on:
     types:
       - published
 
+env:
+  NuGetDirectory: ${{ github.workspace}}/nuget
+  
 defaults:
   run:
     shell: pwsh
