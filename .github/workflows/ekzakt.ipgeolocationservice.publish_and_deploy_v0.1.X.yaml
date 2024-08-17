@@ -38,7 +38,7 @@ jobs:
         run: |
           $offset = 1
           $runNumber = ${{ github.run_number }}
-          Write-Host "GitHub run_number: $runNumber
+          Write-Host "GitHub run_number: $runNumber"
           $versionNumber = $runNumber - $offset
           Write-Host "Calculated Version Number: $versionNumber"
           $projects = @(
