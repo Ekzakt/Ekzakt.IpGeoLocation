@@ -6,7 +6,7 @@
 	  <Nullable>enable</Nullable>
 	  <Authors>Ekzakt</Authors>
 	  <Company>Ekzakt</Company>
-	  <Version>0.0.1</Version>
+	  <Version>0.0.0</Version>
 	  <Description>Package for accessing from the IpInfo geolocation service.</Description>
 	  <PackageProjectUrl>https://github.com/Ekzakt/Ekzakt.EmailSender</PackageProjectUrl>
 	  <PackageTags>ip geolocation, ipinfo, ekzakt</PackageTags>

@@ -37,12 +37,17 @@ jobs:
       - name: Build solution
         run: dotnet build --configuration Release
 
-      - name: Update Build Number for Ekzakt.EmailSender.Core
+      # Handling IpGeoLocationService.Core project
+      - name: Update Build Number for Ekzakt.IpGeoLocationService.Core
         run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj
       
       - name: Pack Ekzakt.IpGeoLocationService.Core
         run: dotnet pack src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj --configuration Release --output ./nupkgs
 
+      # Handling IpGeoLocationService.IpInfo project
+      - name: Update Build Number for Ekzakt.IpGeoLocationService.Core
+        run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj
+        
       - name: Pack Ekzakt.IpGeoLocationService.IpInfo
         run: dotnet pack src/Ekzakt.IpGeoLocationService.IpInfo/Ekzakt.IpGeoLocationService.IpInfo.csproj --configuration Release --output ./nupkgs
 
