@@ -26,7 +26,7 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.x'   # Adjust the .NET SDK version as needed
+          dotnet-version: '8.x'
 
       - name: Restore dependencies
         run: dotnet restore
@@ -34,27 +34,16 @@ jobs:
       - name: Build solution
         run: dotnet build --configuration Release
 
-      # Handling IpGeoLocationService.Core project
-      - name: Update Build Number for Ekzakt.IpGeoLocationService.Core
-        run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj
-      
-      - name: Pack Ekzakt.IpGeoLocationService.Core
-        run: dotnet pack src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj --configuration Release --output ./nupkgs
+      - name: Update Build Number and Pack Projects
+        run: |
+          $projects = @(
+            "src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj",
+            "src/Ekzakt.IpGeoLocationService.IpInfo/Ekzakt.IpGeoLocationService.IpInfo.csproj"
+          )
+          foreach ($project in $projects) {
+            sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" $project
+            dotnet pack $project --configuration Release --output ./nupkgs
+          }
 
-      # Handling IpGeoLocationService.IpInfo project
-      - name: Update Build Number for Ekzakt.IpGeoLocationService.IpInfo
-        run: sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" src/Ekzakt.IpGeoLocationService.IpInfo/Ekzakt.IpGeoLocationService.IpInfo.csproj
-        
-      - name: Pack Ekzakt.IpGeoLocationService.IpInfo
-        run: dotnet pack src/Ekzakt.IpGeoLocationService.IpInfo/Ekzakt.IpGeoLocationService.IpInfo.csproj --configuration Release --output ./nupkgs
-
-      - name: Publish to NuGet
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.x'
-
-      - name: Publish Core package
-        run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
-
-      - name: Publish IpInfo package
+      - name: Publish Packages to NuGet
         run: dotnet nuget push ./nupkgs/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
