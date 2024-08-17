@@ -37,7 +37,9 @@ jobs:
       - name: Update Build Number and Pack Projects
         run: |
           $offset = 1
-          $versionNumber = ${{ github.run_number }} - $offset
+          $runNumber = ${{ github.run_number }}
+          Write-Host "GitHub run_number: $runNumber
+          $versionNumber = $runNumber - $offset
           Write-Host "Calculated Version Number: $versionNumber"
           $projects = @(
             "src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj",
