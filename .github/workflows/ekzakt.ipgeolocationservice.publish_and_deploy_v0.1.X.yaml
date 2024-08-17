@@ -38,6 +38,7 @@ jobs:
         run: |
           $offset = 1
           $versionNumber = ${{ github.run_number }} - $offset
+          Write-Host "Calculated Version Number: $versionNumber"
           $projects = @(
             "src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj",
             "src/Ekzakt.IpGeoLocationService.IpInfo/Ekzakt.IpGeoLocationService.IpInfo.csproj"
