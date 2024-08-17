@@ -36,12 +36,14 @@ jobs:
 
       - name: Update Build Number and Pack Projects
         run: |
+          $offset = 1
+          $versionNumber = ${{ github.run_number }} - $offset
           $projects = @(
             "src/Ekzakt.IpGeoLocationService.Core/Ekzakt.IpGeoLocationService.Core.csproj",
             "src/Ekzakt.IpGeoLocationService.IpInfo/Ekzakt.IpGeoLocationService.IpInfo.csproj"
           )
           foreach ($project in $projects) {
-            sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1${{github.run_number}}/" $project
+            sed -i "s/\(<Version>\([0-9]\+\.\)\{2\}\)\([0-9]\+\)/\1$versionNumber/" $project
             dotnet pack $project --configuration Release --output ./nupkgs
           }
 
