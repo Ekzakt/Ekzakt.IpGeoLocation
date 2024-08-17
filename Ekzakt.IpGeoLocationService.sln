@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C8344E8D-413A-4173-A86F-F58B0FD3DE21}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F1CEF8E2-CFEC-4940-9077-E0D739A99451}"
+	ProjectSection(SolutionItems) = preProject
+		docs\README_CORE.md = docs\README_CORE.md
+		docs\README_IP_INFO.md = docs\README_IP_INFO.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ekzakt.IpGeoLocationService.Core", "src\Ekzakt.IpGeoLocationService.Core\Ekzakt.IpGeoLocationService.Core.csproj", "{3C9978E7-46A3-4200-9A8E-D58FA12B2BD1}"
 EndProject

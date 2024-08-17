@@ -8,13 +8,24 @@
 	  <Company>Ekzakt</Company>
 	  <Version>0.0.0</Version>
 	  <Description>Package for accessing from the IpInfo geolocation service.</Description>
-	  <PackageProjectUrl>https://github.com/Ekzakt/Ekzakt.EmailSender</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/Ekzakt/Ekzakt.IpGeoLocationService.Core</PackageProjectUrl>
 	  <PackageTags>ip geolocation, ipinfo, ekzakt</PackageTags>
 	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageReadmeFile>README_IP_INFO.md</PackageReadmeFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Ekzakt.IpGeoLocationService.Core\Ekzakt.IpGeoLocationService.Core.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\docs\README_IP_INFO.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
 </Project>

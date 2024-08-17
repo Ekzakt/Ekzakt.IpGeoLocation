@@ -8,10 +8,18 @@
 		<Company>Ekzakt</Company>
 		<Version>0.0.0</Version>
 		<Description>Package for accessing ip geolocation services. This project contains contracts and models.</Description>
-		<PackageProjectUrl>https://github.com/Ekzakt/Ekzakt.EmailSender</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/Ekzakt/Ekzakt.IpGeoLocationService.Core</PackageProjectUrl>
 		<PackageTags>ip geolocation, ekzakt</PackageTags>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageReadmeFile>README_CORE.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\docs\README_CORE.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.4">
