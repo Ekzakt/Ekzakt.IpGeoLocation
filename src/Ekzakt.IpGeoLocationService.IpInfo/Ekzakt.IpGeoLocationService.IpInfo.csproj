@@ -28,4 +28,8 @@
 		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Ekzakt.IpGeoLocationService.Core\Ekzakt.IpGeoLocationService.Core.csproj" />
+	</ItemGroup>
+
 </Project>
